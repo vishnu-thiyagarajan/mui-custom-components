@@ -33,16 +33,16 @@ ValueLabelComponent.propTypes = {
 };
 
 const PrettoMinSlider = withStyles({
-  root: {
+  disabled: {
     color: "#FFA450",
-    height: 8
+    height: 10
   },
   thumb: {
-    height: 12,
-    width: 12,
+    height: 200,
+    width: 200,
     backgroundColor: "#FFCB8D",
-    marginTop: -2,
-    marginLeft: -12
+    marginTop: -5,
+    marginLeft: -10
   },
   track: {
     height: 8,
@@ -51,8 +51,8 @@ const PrettoMinSlider = withStyles({
   },
   rail: {
     height: 8,
-    borderRadius: 40,
-    color: "transparent"
+    borderRadius: 40
+    // color: "transparent"
   }
 })(Slider);
 
@@ -87,26 +87,24 @@ export default function CustomizedSlider() {
     <div className={classes.root}>
       <Box
         bgcolor="background.transparent"
-        p={2}
+        p={3}
         position="absolute"
         top={0}
-        left="0%"
         width="100%"
-        height="20%"
         zIndex="-1"
       >
         <PrettoMinSlider
           ThumbComponent={AvgThumbComponent}
+          disabled
           aria-label="pretto slider"
-          defaultValue={25}
+          defaultValue={23}
         />
       </Box>
       <Box
         bgcolor="background.transparent"
-        p={2}
+        p={3}
         position="absolute"
         top={0}
-        left="0%"
         width="100%"
         zIndex="-2"
       >
