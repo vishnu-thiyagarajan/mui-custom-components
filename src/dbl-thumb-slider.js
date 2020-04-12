@@ -16,6 +16,29 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const marks = [
+  {
+    value: 20,
+    label: "Basic"
+  },
+  {
+    value: 40,
+    label: "IGBC"
+  },
+  {
+    value: 60,
+    label: "IGBC PLATINUM"
+  },
+  {
+    value: 80,
+    label: "SD+"
+  },
+  {
+    value: 100,
+    label: "SD+ ZEN"
+  }
+];
+
 function ValueLabelComponent(props) {
   const { children, open, value } = props;
 
@@ -53,6 +76,13 @@ const PrettoMinSlider = withStyles({
     height: 8,
     borderRadius: 40
     // color: "transparent"
+  },
+  mark: {
+    color: "#000000",
+    opacity: 0.2,
+    height: 15,
+    width: 1,
+    marginTop: -3
   }
 })(Slider);
 
@@ -97,7 +127,8 @@ export default function CustomizedSlider() {
           ThumbComponent={AvgThumbComponent}
           disabled
           aria-label="pretto slider"
-          defaultValue={23}
+          defaultValue={20}
+          marks={marks}
         />
       </Box>
       <Box
@@ -112,6 +143,7 @@ export default function CustomizedSlider() {
           ThumbComponent={YouThumbComponent}
           aria-label="pretto slider"
           defaultValue={40}
+          // marks={marks}
         />
       </Box>
     </div>
