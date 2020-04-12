@@ -69,6 +69,7 @@ const PrettoMinSlider = withStyles({
   },
   track: {
     height: 8,
+    // borderRadius: 0,
     borderRadius: 40,
     color: "#FFCB8D"
   },
@@ -161,7 +162,7 @@ function YouThumbComponent(props) {
 function AvgThumbComponent(props) {
   return (
     <span {...props}>
-      <AdjustIcon fontSize="small" />
+      <AdjustIcon style={{ fontSize: 13 }} />
     </span>
   );
 }
